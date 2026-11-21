@@ -1,5 +1,5 @@
 #include"Node.hpp"
 struct Edge{
-    int neigh_id;
+    NodeId neigh_id;
     double wt;
 };
