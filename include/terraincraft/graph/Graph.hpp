@@ -1,24 +1,32 @@
-#include"Node.hpp"
-#include"Edge.hpp"
-#include<vector>
+#pragma once
+
+#include "Node.hpp"
+#include "Edge.hpp"
+
+#include <cstddef>
+#include <vector>
 
 using namespace std;
-class Graph{
+namespace terraincraft::graph {
+
+class Graph {
+
 private:
     vector<Node> nodes;
     vector<vector<Edge>> adjacency;
 
-    NodeId addNode(double longitude,double latitude);
+public:
+    NodeId addNode(double longitude, double latitude);
 
-    NodeId addDirectedEdge(NodeId  from , NodeId  to , double weight);
+    void addDirectedEdge(NodeId from, NodeId to, double weight); //note that we can write  size_int as int also
 
-    NodeId addUndirectedEdge(NodeId from , NodeId to, double weight);
+    void addUndirectedEdge(NodeId from, NodeId to, double weight);
 
-    const Node& getNode(NodeId id)const;
+    const Node& getNode(NodeId id) const;
 
-    const vector<Edge>& getNeighbours(NodeId id)const;
+    const vector<Edge>& getNeighbors(NodeId id) const;
 
-    NodeId nodeCount() const;
-
+    size_t nodeCount() const;
 
 };
+}

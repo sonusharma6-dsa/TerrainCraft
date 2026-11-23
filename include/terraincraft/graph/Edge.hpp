@@ -1,5 +1,7 @@
 #include"Node.hpp"
+namespace terraincraft::graph {
 struct Edge{
-    NodeId neigh_id;
-    double wt;
+    NodeId to;
+    double weight;
 };
+}
