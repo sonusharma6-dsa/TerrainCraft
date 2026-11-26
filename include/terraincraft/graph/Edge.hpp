@@ -1,3 +1,5 @@
+#pragma once
+
 #include"Node.hpp"
 namespace terraincraft::graph {
 struct Edge{

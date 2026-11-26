@@ -19,7 +19,7 @@ int main() {
     assert(jaipur == 1);
     assert(graph.nodeCount() == 2);
 
-
+    
     assert(graph.getNode(delhi).longitude == 77.2090);
     assert(graph.getNode(delhi).latitude == 28.6139);
 

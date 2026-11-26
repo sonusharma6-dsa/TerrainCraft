@@ -18,7 +18,7 @@ private:
 public:
     NodeId addNode(double longitude, double latitude);
 
-    void addDirectedEdge(NodeId from, NodeId to, double weight); //note that we can write  size_int as int also
+    void addDirectedEdge(NodeId from, NodeId to, double weight); //note that we can write  size_t as int also
 
     void addUndirectedEdge(NodeId from, NodeId to, double weight);
 
