@@ -1,6 +1,7 @@
-
 build/
+build-*/
 cmake-build-*/
+clang-build/
 out/
 *.exe
 *.o
@@ -8,6 +9,15 @@ out/
 *.dll
 *.so
 *.a
+*.lib
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+build.ninja
+.ninja_deps
+.ninja_log
 .vscode/
 .idea/
 .DS_Store
