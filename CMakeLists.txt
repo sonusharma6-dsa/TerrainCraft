@@ -23,6 +23,7 @@ target_include_directories(terraincraft_graph
 # Algorithms library
 add_library(terraincraft_algorithms
     src/algorithms/BFS.cpp
+    src/algorithms/DFS.cpp
 )
 
 target_include_directories(terraincraft_algorithms
@@ -59,7 +60,10 @@ add_test(
 )
 
 add_executable(test_bfs tests/test_bfs.cpp)
+add_executable(test_dfs tests/test_dfs.cpp)
 
 target_link_libraries(test_bfs PRIVATE terraincraft_algorithms)
+target_link_libraries(test_dfs PRIVATE terraincraft_algorithms)
 
 add_test(NAME bfs_tests COMMAND test_bfs)
+add_test(NAME dfs_test COMMAND test_dfs)
